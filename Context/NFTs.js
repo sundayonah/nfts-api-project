@@ -86,8 +86,8 @@ export const StateContextProvider = ({ children }) => {
 
       // listing Price
       const listingPrice = await contract.call('listingPrice');
-      const allImages = images.map((image, i) => {
-         const { creator, title, description, email, image } = image;
+      const allImages = images.map((images, i) => {
+         const { creator, title, description, email, image } = images;
          owner: creator;
          title: title;
          description: description;
