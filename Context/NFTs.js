@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import axios from 'axios';
+import { ethers } from 'ethers';
 import {
    useAddress,
    useContract,
    useMetamask,
-   // new hooks for frontend
    useDisconnect,
    useSigner,
 } from '@thirdweb-dev/react';
-import { ethers } from 'ethers';
 
 const StateContext = createContext();
 
@@ -21,7 +20,6 @@ export const StateContextProvider = ({ children }) => {
    const connect = useMetamask();
 
    // frontend
-
    const disconnect = useDisconnect();
    const signer = useSigner();
    const [userBalance, setUserBalance] = useState();
