@@ -75,7 +75,7 @@
    background: transparent;
    padding: 0.5rem 2.5rem;
    border-radius: 0.5rem;
-   /* border: none; */
+   border: none;
 }
 
 .subscribe_box input::placeholder {

@@ -1,6 +1,6 @@
 .spinner {
-   width: 70.4px;
-   height: 70.4px;
+   width: 50.4px;
+   height: 50.4px;
    --clr: #f89b29;
    --clr-alpha: rgb(247, 197, 159, 0.1);
    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);

@@ -3,10 +3,10 @@ body {
    color: #fff;
 }
 
-// home page
+/* // home page */
 .home {
    width: 70%;
-   margin: auto;
+   margin: 0 auto;
    margin-block: 3rem;
 }
 
@@ -15,9 +15,9 @@ body {
    font-size: 1.5rem;
 }
 
-//upload
+/* //upload */
 .upload {
-   widyh: 100%;
+   width: 100%;
    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
    border-radius: 1rem;
    display: grid;
@@ -39,7 +39,7 @@ body {
    margin-bottom: 5rem;
 }
 
-// card
+/* // card */
 .card {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -58,7 +58,7 @@ body {
    border: 1px solid #f89b29;
 }
 
-// profile
+/* // profile */
 .profile {
    border-radius: 1rem;
    background: #1a1a1a;
@@ -73,7 +73,7 @@ body {
    height: 100%;
 }
 
-// loader
+/* // loader */
 .loader {
    width: 100%;
    height: 100%;
@@ -103,7 +103,7 @@ body {
    margin: 0 auto;
 }
 
-// api page
+/* // api page */
 
 .api-body {
    display: grid;
@@ -123,7 +123,7 @@ body {
    border-radius: 0.5rem;
 }
 
-// media querry
+/* // media querry */
 @media screen and (min-width: 55em) {
    .card {
       grid-template-columns: 1fr 1fr;
