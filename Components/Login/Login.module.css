@@ -128,6 +128,7 @@
    background-image: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
    border-radius: 22px;
    transition: all 0.3s;
+   z-index: 11111111;
 }
 
 .card2 {

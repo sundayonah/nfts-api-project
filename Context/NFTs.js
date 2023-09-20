@@ -9,7 +9,7 @@ import {
    useSigner,
 } from '@thirdweb-dev/react';
 
-const StateContext = createContext();
+export const StateContext = createContext({});
 
 export const StateContextProvider = ({ children }) => {
    const { contract } = useContract(
@@ -78,26 +78,25 @@ export const StateContextProvider = ({ children }) => {
    const getUploadedImages = async () => {
       // All Images
       const images = await contract.call('getAllNFTs');
-
+      console.log(images);
       // total upload
       const totalUpload = await contract.call('imagesCount');
 
       // listing Price
       const listingPrice = await contract.call('listingPrice');
-      const allImages = images.map((images, i) => {
-         const { creator, title, description, email, image } = images;
-         owner: creator;
-         title: title;
-         description: description;
-         email: email;
-         category: category;
-         fundraised: fundraised;
-         image: image;
-         imageId: id.toNumber();
-         createdAt: timestamp.toNumber();
-         listedAmount: ethers.utils.formatEther(listingPrice.toString()); //
-         totalUpload: totalUpload.toNumber(); //
-      });
+      const allImages = images.map((image, i) => ({
+         owner: image.creator,
+         title: image.title,
+         description: image.description,
+         email: image.email,
+         category: image.category,
+         fundraised: image.fundraised,
+         imageId: image.id.toNumber(),
+         createdAt: image.timestamp.toNumber(),
+         listedAmount: ethers.utils.formatEther(listingPrice.toString()), //
+         totalUpload: totalUpload.toNumber(), //
+      }));
+      console.log(allImages);
       return allImages;
    };
 

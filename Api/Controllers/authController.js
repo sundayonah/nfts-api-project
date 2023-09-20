@@ -15,8 +15,7 @@ const createSendToken = (user, statusCode, req, res) => {
          Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
       httpOnly: true,
-      secure:
-         require.secure || require.headers['x=forwarded-proto'] === 'https',
+      secure: req.secure || req.headers['x=forwarded-proto'] === 'https',
    });
 
    // remove password from output
@@ -58,7 +57,7 @@ exports.login = async (req, res, next) => {
    const user = await User.findOne({ email }).select('+password');
 
    if (!user || !(await user.correctPassword(password, user.password))) {
-      res.status(401).join({
+      res.status(401).json({
          status: 'fail',
          message: 'Incorrect email or password',
       });

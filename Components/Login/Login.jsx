@@ -7,6 +7,7 @@ import Style from './Login.module.css';
 import { Notification } from '../index';
 
 const Login = ({ setLogin, setSignup, notification, setNotification }) => {
+   //api login
    const [user, setUser] = useState({ email: '', password: '' });
 
    const handleFormFieldChange = (fieldName, e) => {

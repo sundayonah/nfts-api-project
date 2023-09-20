@@ -20,7 +20,7 @@
 
 .second {
    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-   -webkit-backgroound-clip: text;
+   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
@@ -142,4 +142,22 @@
 
 .card:hover {
    box-shadow: 0px 0px 30px 1px rgba(0, 225, 117, 0.3);
+}
+
+@media screen and (max-width: 55em) {
+   .button3 {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 45em) {
+   .button3 {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 35em) {
+   .button3 {
+      display: none;
+   }
 }

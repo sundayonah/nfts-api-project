@@ -28,7 +28,7 @@ const Upload = ({ onImageChange, display, retrieveFile }) => {
          </div>
          <label for="file" className={Style.footer}>
             <File />
-            <p>Not selected file</p>
+            <p>Browse image</p>
             <Delete />
             <input
                id="file"

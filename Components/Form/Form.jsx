@@ -36,7 +36,7 @@ const Form = ({
                      type="description"
                      placeholder="description"
                      className={`${Style.textarea} ${Style.input_field}`}
-                     onChange={(e) => handleFormFieldChange('description')}
+                     onChange={(e) => handleFormFieldChange('description', e)}
                   ></textarea>
                </div>
                <div className={Style.field}>
@@ -52,8 +52,8 @@ const Form = ({
                <div className={Style.category}>
                   {categories.map((category, i) => (
                      <CheckBox
-                        setCategory={setCategory}
                         key={i + 1}
+                        setCategory={setCategory}
                         category={category}
                      />
                   ))}
